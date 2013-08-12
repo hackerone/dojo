@@ -1,5 +1,5 @@
 
-var singleRoman = function(input){
+var singleDecimal = function(input){
 
 		switch(input){
 			case 'I':
@@ -26,19 +26,14 @@ var decimal = function(input){
 	var chars = input.split(''); // III -> ['I', 'I', 'I']
 	var sum = 0;
 
-
 	for(i = 0; i < chars.length; i++){
-			if(typeof(chars[i+1]) !== 'undefined' && singleRoman(chars[i+1]) > singleRoman(chars[i])){
-				sum -= singleRoman(chars[i]); 
-
+			if( (i+1 < chars.length) && singleDecimal(chars[i+1]) > singleDecimal(chars[i])){
+				sum -= singleDecimal(chars[i]);
 			}else{
-				sum += singleRoman(chars[i]);
+				sum += singleDecimal(chars[i]);
 			}
-		
 	}
-
 	return sum;
-
 };
 
 

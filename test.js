@@ -1,7 +1,7 @@
 var assert = require('chai').assert,
 	decimal = require('./decimal').decimal;
 
-describe("test for roman numbers", function(){
+describe("test for converting roman numerals to decimal numbers", function(){
 		it("should return 1 when input is I", function(){
 			assert.equal(1, decimal('I'));
 		});
@@ -14,12 +14,13 @@ describe("test for roman numbers", function(){
 			assert.equal(3, decimal('III'));
 		});
 
-		it("should return 4 when input is IV", function(){
-			assert.equal(4, decimal('IV'));
-		});
 
 		it("should return 5 when input is V", function(){
 			assert.equal(5, decimal('V'));
+		});
+
+		it("should return 4 when input is IV", function(){
+			assert.equal(4, decimal('IV'));
 		});
 
 		it("should return 6 when input VI", function(){
@@ -46,4 +47,7 @@ describe("test for roman numbers", function(){
 			assert.equal(50, decimal('L'));
 		});
 
+		it("should return 999 when input in IM", function(){
+			assert.equal(999, decimal('IM'));
+		});
 });
