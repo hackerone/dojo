@@ -2,7 +2,6 @@ var assert = require('chai').assert,
 	decimal = require('./decimal').decimal;
 
 describe("test for roman numbers", function(){
-	describe("test",function(){
 		it("should return 1 when input is I", function(){
 			assert.equal(1, decimal('I'));
 		});
@@ -46,6 +45,5 @@ describe("test for roman numbers", function(){
 		it("should return 50 when input in L", function(){
 			assert.equal(50, decimal('L'));
 		});
-	});
 
 });
